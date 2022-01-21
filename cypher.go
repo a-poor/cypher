@@ -1,8 +1,7 @@
-package main
+package cypher
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 	"github.com/olekukonko/tablewriter"
@@ -43,6 +42,7 @@ func (l *cypherListener) VisitErrorNode(node antlr.ErrorNode) {
 	panic(fmt.Errorf("%q, %T, %+v", node.GetText(), node, node))
 }
 
+/*
 func main() {
 	// q := `MATCH (:Person {name: "Alice"})-[:KNOWS]->(:Person {name: "Bob"}) RETURN count(*)`
 	// q := `CREATE (n:Person {name: 'Andy', title: 'Developer'})`
@@ -69,3 +69,5 @@ func main() {
 
 	tw.Render()
 }
+
+*/
